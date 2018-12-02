@@ -63,7 +63,7 @@ public class MainFrame extends JFrame{
         this.add(newPanel, BorderLayout.CENTER);
        /* mainPanel.add(newPanel,BorderLayout.CENTER);
         this.add(mainPanel);*/
-        this.setTitle("微信群消息发送助手");
+        this.setTitle("微信消息发送助手");
     }
 
 

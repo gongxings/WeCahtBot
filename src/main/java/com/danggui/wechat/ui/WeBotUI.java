@@ -341,7 +341,7 @@ public class WeBotUI extends JFrame {
 
         MyMessagesHandle msgHandler = new MyMessagesHandle(); // 实现IMsgHandlerFace接口的类
         //启动微信
-        Wechat wechat = new Wechat(msgHandler, "src/main/resources/images"); // 【注入】
+        Wechat wechat = new Wechat(msgHandler, System.getProperty("user.dir")+"/images"); // 【注入】
         wechat.start();
         SwingUtilities.invokeLater(new Runnable() {
             @Override

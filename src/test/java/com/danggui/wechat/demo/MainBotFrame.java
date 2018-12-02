@@ -1,14 +1,9 @@
 package com.danggui.wechat.demo;
 
-import com.danggui.wechat.ui.tree.ChexBoxTreeModel;
 import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
 
 import javax.swing.*;
-import javax.swing.event.TreeModelListener;
-import javax.swing.tree.DefaultMutableTreeNode;
-import javax.swing.tree.TreeModel;
-import javax.swing.tree.TreePath;
 import java.awt.*;
 
 public class MainBotFrame {
@@ -41,58 +36,6 @@ public class MainBotFrame {
         });
     }
 
-
-    public void setData(ContractListTree data) {
-        TreeModel treeModel = new TreeModel() {
-            @Override
-            public Object getRoot() {
-                return "通讯录";
-            }
-
-            @Override
-            public Object getChild(Object parent, int index) {
-                return null;
-            }
-
-            @Override
-            public int getChildCount(Object parent) {
-                return 2;
-            }
-
-            @Override
-            public boolean isLeaf(Object node) {
-                return false;
-            }
-
-            @Override
-            public void valueForPathChanged(TreePath path, Object newValue) {
-
-            }
-
-            @Override
-            public int getIndexOfChild(Object parent, Object child) {
-                return 0;
-            }
-
-            @Override
-            public void addTreeModelListener(TreeModelListener l) {
-
-            }
-
-            @Override
-            public void removeTreeModelListener(TreeModelListener l) {
-
-            }
-        };
-        contractList.setModel(treeModel);
-    }
-
-    public void getData(ContractListTree data) {
-    }
-
-    public boolean isModified(ContractListTree data) {
-        return true;
-    }
 
     /**
      * @noinspection ALL

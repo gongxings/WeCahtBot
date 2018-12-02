@@ -6,6 +6,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.danggui.wechat.face.IMsgHandlerFace;
+import sun.rmi.runtime.Log;
+
+import java.io.File;
 
 public class Wechat {
 	private static final Logger LOG = LoggerFactory.getLogger(Wechat.class);
@@ -17,6 +20,11 @@ public class Wechat {
 
 		// 登陆
 		LoginController login = new LoginController();
+		File qrFile = new File(qrPath);
+		if(!qrFile.exists()){
+			qrFile.mkdir();
+		}
+		LOG.info("二维码路径:"+qrFile.getAbsolutePath());
 		login.login(qrPath);
 	}
 
