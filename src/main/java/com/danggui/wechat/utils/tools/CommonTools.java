@@ -12,6 +12,7 @@ import java.util.regex.Pattern;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
+import com.danggui.wechat.ui.QrCodeShowFrame;
 import org.w3c.dom.Document;
 import org.xml.sax.InputSource;
 
@@ -35,15 +36,10 @@ public class CommonTools {
 
 	public static boolean printQr(String qrPath) {
 
-		switch (Config.getOsNameEnum()) {
+		/*switch (Config.getOsNameEnum()) {
 		case WINDOWS:
 			if (Config.getOsNameEnum().equals(OsNameEnum.WINDOWS)) {
-				Runtime runtime = Runtime.getRuntime();
-				try {
-					runtime.exec("cmd /c start " + qrPath);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
+
 			}
 			break;
 		case MAC:
@@ -59,7 +55,8 @@ public class CommonTools {
 
 		default:
 			break;
-		}
+		}*/
+		QrCodeShowFrame qrCodeShowFrame = new QrCodeShowFrame();
 		return true;
 	}
 

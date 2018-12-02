@@ -44,6 +44,7 @@ public class Core {
 
 	private String userName;
 	private String nickName;
+	private Map<String,String> nickNameIdMap = new HashMap<>();
 	private List<BaseMsg> msgList = new ArrayList<BaseMsg>();
 
 	private JSONObject userSelf; // 登陆账号自身信息
@@ -273,4 +274,11 @@ public class Core {
 		this.indexUrl = indexUrl;
 	}
 
+	public Map<String, String> getNickNameIdMap() {
+		return nickNameIdMap;
+	}
+
+	public void setNickNameIdMap(Map<String, String> nickNameIdMap) {
+		this.nickNameIdMap = nickNameIdMap;
+	}
 }

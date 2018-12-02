@@ -54,7 +54,7 @@ public class MessageTools {
 	 * @param text
 	 * @param toUserName
 	 */
-	private static void sendMsg(String text, String toUserName) {
+	public static void sendMsg(String text, String toUserName) {
 		if (text == null) {
 			return;
 		}
@@ -200,7 +200,6 @@ public class MessageTools {
 	 * 
 	 * @author https://github.com/yaphone
 	 * @date 2017年5月7日 下午10:32:45
-	 * @param nackName
 	 * @return
 	 */
 	public static boolean sendPicMsgByNickName(String nickName, String filePath) {
@@ -216,7 +215,6 @@ public class MessageTools {
 	 * 
 	 * @author https://github.com/yaphone
 	 * @date 2017年5月7日 下午10:34:24
-	 * @param nickName
 	 * @param filePath
 	 * @return
 	 */
